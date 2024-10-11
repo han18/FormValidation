@@ -7,6 +7,10 @@ const errorDisplay = document.getElementById("errorDisplay");
 
 form.addEventListener("submit", validate);
 
+const usernameVal = document.getElementById("username")
+
+const userStorage = localStorage.username
+
 function validateForm(evt) {
   errorDisplay.innerHTML = ""; // Clearing errors
   evt.preventDefault();
