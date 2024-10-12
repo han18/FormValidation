@@ -9,6 +9,8 @@
       crossorigin="anonymous"
     ></script>
     <script defer type="text/javascript" src="main.js"></script>
+    <!-- <script defer type="text/javascript" src="index.js"></script> -->
+
   </head>
   <body>
     <!-- Container for entire form. -->
@@ -59,6 +61,8 @@
             placeholder="Password"
             minlength="12"
             maxlength="20"
+            title="The email must be a valid email address.
+            The email must not be from the domain example.com."
             required
           />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
@@ -82,7 +86,7 @@
           </div>
         </form>
       </div>
-      <!-- //==================================LOGIN SECTION================================================== -->
+      <!-- //================================== LOGIN SECTION ================================================== -->
 
       <!-- Login Side -->
       <div>
@@ -98,17 +102,17 @@
             maxlength="4"
             title="Username must be more than 4 characters long"
             pattern="^(?=.*[a-zA-Z])(?=.*[a-zA-Z]).{2,}$"
-            title="Username must contain at least two unique characters and cannot contain special characters or whitespace."
+            title="Username can not be blank"
             required
           />
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="password" type="text" placeholder="Password" required />
+          <input name="password" type="text" placeholder="Password" required  title="Password can not be blank"/>
           <span class="input-icon"><i class="fa-solid fa-key"></i></span
           ><br /><br />
 
           <div class="flex-row">
-            <input name="persist" type="checkbox" />
+            <input name="persist" type="checkbox" required />
             <label for="persist">Keep me logged in.</label>
             <input type="submit" value="Login" required />
           </div>
